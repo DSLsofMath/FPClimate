@@ -1,0 +1,19 @@
+# FPClimate
+PhD course on Functional Programming and Climate Impact Research
+
+Title: Functional Programming and Climate Impact Research
+
+Abstract: This is a course aimed at PhD students or MSc students
+interested in the application of functional programming,
+domain-specific languages, and dependent types to climate impact
+research.
+
+** Lecture / seminar / reading plan
+The course is based on material from the following research papers:
++ 2011: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
++ 2012: [[file:ref/2021_DepTy_SciComp_978-3-642-41582-1_9.pdf][Dependently-Typed Programming in Scientific Computing - Examples from Economic Modelling]]
++ 2014: [[file:ref/2014_Jansson-Patrik-Computational-Theory-of-GSS.pdf][Towards a Computational Theory of GSS: a Case for Domain-Specific Languages]]
++ 2017: [[file:ref/2017a_SeqDecProb1.pdf][Sequential decision problems, dependent types and generic solutions]]
++ 2017: [[file:ref/2017b_contributions-to-a-computational-theory-of-policy-advice-and-avoidability.pdf][Contributions to a computational theory of policy advice and avoidability]]
++ 2018: [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]
++ 2023: [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]
