@@ -19,6 +19,8 @@ The course is based on material from the following research papers:
 + 2018: [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]
 + 2023: [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]
 
+Good background reading is provided by the 2023 book [[https://www.cambridge.org/core/books/computing-the-climate/64DAAC995DC84241F8D8605B3779C68A]["Computing the Climate"]] by Steve M. Easterbrook.
+
 ** Examination
 
 The course is examined through
@@ -32,6 +34,10 @@ The course is examined through
   formalisation as a way of understanding new domains
 + Understand a selection of topics in Climate Impact Research
 + Experience in using Haskell and Agda for formalisation
+
+** Scheduling
++ The course will start in March (2024-03-??) and end in May or June.
++ TODO details
 
 ** Other resources
 + TODO add links to talks, etc. online
