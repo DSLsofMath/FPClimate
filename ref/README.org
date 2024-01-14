@@ -1,0 +1,11 @@
+* 2010_Vulnerability_Modelling.pdf: Vulnerability Modelling with Functional Programming and Dependent Types
++ Official source: https://www.cambridge.org/core/journals/mathematical-structures-in-computer-science/article/vulnerability-modelling-with-functional-programming-and-dependent-types/C68FE66F3730E7DA26F4FE2F6352EBC9
++ Commments below refer to the pre-print in this direcory.
++ Section 4, page 7: the definition of "harm = v . x" is confusing -
+  the x and v were defined "long ago" (on page 4).
++ Section 5, page 9: "measure xs = 10" - there is no "xs" in scope?
+  Perhaps ns in intended?
++ Section 5, page 9: "measure (fmap inc xs) = 1" This is worth some
+  more explanation: the key is that "inc" collapses two inputs to one,
+  and thus the joint probability ends up at 0.6 > 0.4.
++ Section 5, page 11: "xs" is not defined. Probably "as" in intended.
