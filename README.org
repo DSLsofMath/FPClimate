@@ -58,8 +58,6 @@ upon successful completion of the course.
 
 + Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
 
-** Other resources
-+ TODO add links to talks, etc. online
 * Week 13:
 ** FPClimate seminar 1
 + Introduction (Patrik Jansson)
@@ -67,7 +65,7 @@ upon successful completion of the course.
 + Announced separately
 * Week 15: 
 ** FPClimate seminar 2
-+ Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]]
++ Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulerability modelling]]
 * Week 16: 
 ** FPClimate seminar 3
 * Week 17: 
@@ -82,3 +80,5 @@ upon successful completion of the course.
 ** FPClimate seminar 8
 * Week 22: 
 ** FPClimate seminar 9
+* Other resources
++ TODO add links to talks, etc. online
