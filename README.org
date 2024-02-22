@@ -39,8 +39,22 @@ upon successful completion of the course.
 + Experience in using Haskell and Agda for formalisation
 
 ** Scheduling
-+ The course will start in March (2024-03-??) and end in May or June.
-+ TODO details
++ The course will start in March (2024-03-26) and end in May or June.
++ The preliminary schedule is available below:
+
+| Week | Date           |  Time | Event                          |
+|------+----------------+-------+--------------------------------|
+| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.00 | Talk by Anil Madhavapeddy      |
+| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 15.15 | First FPClimate course meeting |
+| [[https://weeknumber.net/?q=14][14]]   | (Patrik away)  |       |                                |
+| [[https://weeknumber.net/?q=15][15]]   | Mon 2024-04-08 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=16][16]]   | Mon 2024-04-15 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=17][17]]   | Mon 2024-04-22 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=18][18]]   | Mon 2024-04-29 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=19][19]]   | Mon 2024-05-06 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=20][20]]   | Mon 2024-05-13 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=21][21]]   | Mon 2024-05-20 | 16.00 | FPClimate seminar              |
+| [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 16.00 | FPClimate seminar              |
 
 ** Other resources
 + TODO add links to talks, etc. online
