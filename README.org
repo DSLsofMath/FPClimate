@@ -57,28 +57,38 @@ upon successful completion of the course.
 | [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 15.15-17.00 | FPClimate seminar 9                 |
 
 + Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
++ For local participants, the room is EDIT 6128 (at Chalmers campus
+  Johanneberg) for most seminars.
++ For remote participants, we will provide a zoom link.
 
 * Week 13:
 ** FPClimate seminar 1
 + Introduction (Patrik Jansson)
 ** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
 + Announced separately
-* Week 15: 
+* Week 15:
 ** FPClimate seminar 2
 + Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulerability modelling]]
-* Week 16: 
+* Week 16:
 ** FPClimate seminar 3
-* Week 17: 
+* Week 17:
 ** FPClimate seminar 4
-* Week 18: 
+* Week 18:
 ** FPClimate seminar 5
-* Week 19: 
+* Week 19:
 ** FPClimate seminar 6
-* Week 20: 
+* Week 20:
 ** FPClimate seminar 7
-* Week 21: 
+* Week 21:
 ** FPClimate seminar 8
-* Week 22: 
+* Week 22:
 ** FPClimate seminar 9
+
+* How to register
+
++ If you do not need formal credits, you can just contact Patrik Jansson.
++ If you want credits for your local MSc degree, contact the examiner for (DAT235/DIT577): [Ana Bove](https://www.cse.chalmers.se/~bove/)
++ If you want credits for your local PhD degree, obtain the approval of your supervisor and examiner, then contact Patrik Jansson.
+
 * Other resources
 + TODO add links to talks, etc. online
