@@ -1,12 +1,13 @@
 * FPClimate
-PhD course on Functional Programming and Climate Impact Research
+PhD course on "Functional Programming and Climate Impact Research", spring term 2024, study period 4.
 
-Title: Functional Programming and Climate Impact Research
-
-Abstract: This is a course aimed at PhD students or MSc students
+*Abstract*: This is a course aimed at PhD students or MSc students
 interested in the application of functional programming,
 domain-specific languages, and dependent types to climate impact
 research.
+
+*Note*. This course is run as a seminar / reading course.
+Therefore, you must have the motivation and capacity to digest material with limited teacher presence.
 
 ** Lecture / seminar / reading plan
 The course is based on material from the following research papers:
@@ -28,8 +29,8 @@ The course is examined through
 + a sequence of hand-ins (solutions to exercises to be further specified during the course)
 + active participation in most of the weekly seminars
 
-The preliminary plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]])
-upon successful completion of the course.
+The plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]]) upon
+successful completion of the course.
 
 ** Learning outcomes
 
