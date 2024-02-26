@@ -69,7 +69,7 @@ successful completion of the course.
 + Announced separately
 * Week 15:
 ** FPClimate seminar 2
-+ Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulerability modelling]]
++ Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling]]
 * Week 16:
 ** FPClimate seminar 3
 * Week 17:
