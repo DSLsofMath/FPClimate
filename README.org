@@ -67,6 +67,11 @@ successful completion of the course.
 + Introduction (Patrik Jansson)
 ** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
 + Announced separately
++ Title: (Functional) Programming for the Planet
++ Abstract: As simultaneous crises in emissions and biodiversity sweep the planet, computer systems that analyse the complex interplay of our globe’s health are ever more crucial to guiding policy decisions about how to get out of the mess we’re in. In this talk, we examine how functional programming can contribute to building systems that are more resilient, predictable and reproducible in the face of huge amounts of input data (such as from satellites and ground sensing) that demands precise access control (or else poachers and malicious actors go straight to the source) and requires interactive exploration from non-CS-experts at different levels of the software stack (to do climate science). We will also highlight how our ongoing cross-disciplinary research is having a real impact on conservation projects that are sorely underserved by current systems/PL infrastructure, and also how we went about forging these links. We hope to encourage some of you to form your own local collaborations with your colleagues working on the climate crisis!
+
+
+
 * Week 15:
 ** FPClimate seminar 2
 + Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling]]
