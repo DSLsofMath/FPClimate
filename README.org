@@ -26,7 +26,7 @@ Good background reading is provided by the 2023 book [[https://www.cambridge.org
 
 The course is examined through
 
-+ a sequence of hand-ins (solutions to exercises to be further specified during the course)
++ a sequence of graded hand-ins (solutions to exercises to be further specified during the course)
 + active participation in most of the weekly seminars
 
 The plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]]) upon
