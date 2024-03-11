@@ -32,12 +32,22 @@ The course is examined through
 The plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]]) upon
 successful completion of the course.
 
-** Learning outcomes
+** Learning outcomes (after completion of the course the student should be able to)
 
-+ Using functional programming specification / implementation /
-  formalisation as a way of understanding new domains
++ Use functional programming specification / implementation / formalisation as a way of understanding new domains
 + Understand a selection of topics in Climate Impact Research
-+ Experience in using Haskell and Agda for formalisation
++ Effectively use Haskell and Agda for formalisation
+
+*** Knowledge and understanding
++ Master the terminology, concepts and theories associated with the selected area;
++ Demonstrate deep knowledge and understanding in the area of the course, and insight into current research and development;
++ Demonstrate deep methodological knowledge in the area of the course;
+
+*** Skills and abilities
++ Demonstrate the ability to critically and systematically integrate knowledge and to analyse, assess, and deal with complex issues in the area of the course;
+
+*** Judgement and approach
++ Search for, and extract, necessary information from scientific publications in the selected area of the course, with the purpose of identifying strengths and weakness of solutions, approaches and methodologies.
 
 ** Scheduling
 + The course will start in March (2024-03-25) and end in May or June.
