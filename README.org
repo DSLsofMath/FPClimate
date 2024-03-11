@@ -32,8 +32,12 @@ The course is examined through
 The plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]]) upon
 successful completion of the course.
 
-** Learning outcomes (after completion of the course the student should be able to)
+** Prerequisites
++ BSc degree in Computer Science and Engineering or equivalent.
++ Functional programming (ideally in Haskell, but other languages are also OK)
++ Formal methods (ideally using dependent types, but other methods are also OK)
 
+** Learning outcomes (after completion of the course the student should be able to)
 + Use functional programming specification / implementation / formalisation as a way of understanding new domains
 + Understand a selection of topics in Climate Impact Research
 + Effectively use Haskell and Agda for formalisation
