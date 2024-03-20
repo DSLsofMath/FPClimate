@@ -60,7 +60,7 @@ successful completion of the course.
 | Week | Date           |        Time | Event                               | Room      |
 |------+----------------+-------------+-------------------------------------+-----------|
 | [[https://weeknumber.net/?q=13][13]]   | Mon 2024-03-25 | 15.15-17.00 | FPClimate seminar 1                 | EDIT 6128 |
-| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.00-15.00 | Talk by Anil Madhavapeddy           | HB2       |
+| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.15-15.15 | Talk by Anil Madhavapeddy           | HB2       |
 | [[https://weeknumber.net/?q=14][14]]   | (Patrik away)  |             |                                     |           |
 | [[https://weeknumber.net/?q=15][15]]   | Mon 2024-04-08 | 15.15-17.00 | FPClimate seminar 2 (Cezar Ionescu) | EDIT 6128 |
 | [[https://weeknumber.net/?q=16][16]]   | Mon 2024-04-15 | 15.15-17.00 | FPClimate seminar 3                 | EDIT 6128 |
