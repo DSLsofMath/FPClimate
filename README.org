@@ -74,7 +74,7 @@ successful completion of the course.
 + Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
 + For local participants, the room is EDIT 6128 (at Chalmers campus
   Johanneberg) for most seminars.
-+ For remote participants, we will provide a zoom link.
++ For remote participants, the zoom link is almost https://chalmers.zoom.us/my/CUTpatrikja but without the upper case letters.
 
 * Week 13:
 ** FPClimate seminar 1
