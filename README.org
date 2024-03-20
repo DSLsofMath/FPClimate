@@ -55,21 +55,21 @@ successful completion of the course.
 
 ** Scheduling
 + The course will start in March (2024-03-25) and end in May or June.
-+ The preliminary schedule is available below:
++ The schedule is available below:
 
-| Week | Date           |        Time | Event                               |
-|------+----------------+-------------+-------------------------------------|
-| [[https://weeknumber.net/?q=13][13]]   | Mon 2024-03-25 | 15.15-17.00 | FPClimate seminar 1                 |
-| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.00-15.00 | Talk by Anil Madhavapeddy           |
-| [[https://weeknumber.net/?q=14][14]]   | (Patrik away)  |             |                                     |
-| [[https://weeknumber.net/?q=15][15]]   | Mon 2024-04-08 | 15.15-17.00 | FPClimate seminar 2 (Cezar Ionescu) |
-| [[https://weeknumber.net/?q=16][16]]   | Mon 2024-04-15 | 15.15-17.00 | FPClimate seminar 3                 |
-| [[https://weeknumber.net/?q=17][17]]   | Mon 2024-04-22 | 15.15-17.00 | FPClimate seminar 4                 |
-| [[https://weeknumber.net/?q=18][18]]   | Mon 2024-04-29 | 15.15-17.00 | FPClimate seminar 5                 |
-| [[https://weeknumber.net/?q=19][19]]   | Mon 2024-05-06 | 15.15-17.00 | FPClimate seminar 6                 |
-| [[https://weeknumber.net/?q=20][20]]   | Mon 2024-05-13 | 15.15-17.00 | FPClimate seminar 7                 |
-| [[https://weeknumber.net/?q=21][21]]   | Mon 2024-05-20 | 15.15-17.00 | FPClimate seminar 8                 |
-| [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 15.15-17.00 | FPClimate seminar 9                 |
+| Week | Date           |        Time | Event                               | Room      |
+|------+----------------+-------------+-------------------------------------+-----------|
+| [[https://weeknumber.net/?q=13][13]]   | Mon 2024-03-25 | 15.15-17.00 | FPClimate seminar 1                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.00-15.00 | Talk by Anil Madhavapeddy           | HB2       |
+| [[https://weeknumber.net/?q=14][14]]   | (Patrik away)  |             |                                     |           |
+| [[https://weeknumber.net/?q=15][15]]   | Mon 2024-04-08 | 15.15-17.00 | FPClimate seminar 2 (Cezar Ionescu) | EDIT 6128 |
+| [[https://weeknumber.net/?q=16][16]]   | Mon 2024-04-15 | 15.15-17.00 | FPClimate seminar 3                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=17][17]]   | Mon 2024-04-22 | 15.15-17.00 | FPClimate seminar 4                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=18][18]]   | Mon 2024-04-29 | 15.15-17.00 | FPClimate seminar 5 (Nicola Botta)  | EDIT 6128 |
+| [[https://weeknumber.net/?q=19][19]]   | Mon 2024-05-06 | 15.15-17.00 | FPClimate seminar 6                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=20][20]]   | Mon 2024-05-13 | 15.15-17.00 | FPClimate seminar 7                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=21][21]]   | Mon 2024-05-20 | 15.15-17.00 | FPClimate seminar 8 (Nicola Botta)  | EDIT 5128 |
+| [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 15.15-17.00 | FPClimate seminar 9                 | EDIT 6128 |
 
 + Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
 + For local participants, the room is EDIT 6128 (at Chalmers campus
@@ -80,10 +80,9 @@ successful completion of the course.
 ** FPClimate seminar 1
 + Introduction (Patrik Jansson)
 ** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
-+ Announced separately
++ Announced separately [will be in room HB2]
 + Title: (Functional) Programming for the Planet
 + Abstract: As simultaneous crises in emissions and biodiversity sweep the planet, computer systems that analyse the complex interplay of our globe’s health are ever more crucial to guiding policy decisions about how to get out of the mess we’re in. In this talk, we examine how functional programming can contribute to building systems that are more resilient, predictable and reproducible in the face of huge amounts of input data (such as from satellites and ground sensing) that demands precise access control (or else poachers and malicious actors go straight to the source) and requires interactive exploration from non-CS-experts at different levels of the software stack (to do climate science). We will also highlight how our ongoing cross-disciplinary research is having a real impact on conservation projects that are sorely underserved by current systems/PL infrastructure, and also how we went about forging these links. We hope to encourage some of you to form your own local collaborations with your colleagues working on the climate crisis!
-
 * Week 14:
 ** TODO solve W13 exercises
 ** TODO read "[[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling ...]]" paper
@@ -97,12 +96,14 @@ successful completion of the course.
 ** FPClimate seminar 4
 * Week 18:
 ** FPClimate seminar 5
++ Lecture by Nicola Botta
 * Week 19:
 ** FPClimate seminar 6
 * Week 20:
 ** FPClimate seminar 7
 * Week 21:
 ** FPClimate seminar 8
++ Lecture by Nicola Botta
 * Week 22:
 ** FPClimate seminar 9
 
