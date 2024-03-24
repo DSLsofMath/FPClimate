@@ -20,7 +20,9 @@ The course is based on material from the following research papers:
 + Week 21: read 2018: [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]
 + Week 22: read 2023: [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]
 
-Good background reading is provided by the 2023 book [[https://www.cambridge.org/core/books/computing-the-climate/64DAAC995DC84241F8D8605B3779C68A]["Computing the Climate"]] by Steve M. Easterbrook.
+Good background reading is provided by
+the 2023 book "[[https://www.cambridge.org/core/books/computing-the-climate/64DAAC995DC84241F8D8605B3779C68A][Computing the Climate]]" by Steve M. Easterbrook and
+the 2022 book "[[https://www.adlibris.com/se/bok/domain-specific-languages-of-mathematics-9781848903883][Domain-Specific Languages of Mathematics]]" by Jansson, Ionescu, Bernardy.
 
 ** Examination
 
