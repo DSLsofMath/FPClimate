@@ -1,0 +1,60 @@
+* 2024-03-27: Nicola: Added 'extra' folder to the FPClimate repo
+Dear all,
+
+I have added an 'extra' folder to the FPClimate repo. It contains extra
+material that loosely relates to issues touched upon in the first
+meeting.
+
+This extra material is *not* part of the course and thus does *not* need
+to be looked at, let apart studied! But it might be of interest to some
+of us.
+
+As Patrik mentioned during the first seminar, the course offers a
+perspective on climate impact research from the viewpoint of computer
+science (CS) and functional programming (FP).
+
+We will do our best to motivate and explain how CS and FP contributes
+towards understanding and addressing important questions in climate
+policy making.
+
+But we will have little time to look at how these questions are
+addressed from the angle of other disciplines (say, game theory or
+social science) or at how they are dealt with in the application domain.
+
+The 'extra' folder provides pointers in these directions. Thus, for
+example, I have put into the folder Hardin's 1968 seminal paper "The
+tragedy of the commons".
+
+The paper was a cornerstone toward understanding the difficulty of
+collective action for achieving mutually beneficial outcomes. It
+reflects a viewpoint towards decision making that, in turn, motivates
+the Nash equilibrium exercises from the first meeting.
+
+The fact that rational decision makers *anticipate* each other's moves
+can lead to catastrophic outcomes (for example, a bank run when a
+*critical portion* of customers withdraw money from their accounts as
+they fear the bank might go out of business) and needs to be accounted
+for carefully in models of decision making.
+
+A crucial contribution towards understanding the role of *thresholds* in
+models of collective behavior was Mark Granovetter's 1978 paper, also in
+the 'extra' folder.
+
+A simple example for understanding how to deal with *anticipation* in
+decision making is the "three bridges problem". It is discussed in Don
+Ross' SEP article on game theory, also in that folder.
+
+I have also put there also a 'TheThreeBridgesProblem.pdf' file with an
+explicit computation of a (hopefully correct) "solution" of the problem.
+
+Again, this is not part of the course but if you happen to be a fan of
+the "three bridges problem" you might want to have a look at it.
+
+Have fun with the exercises from the first meeting and with reading and
+preparing questions for the 'Vulnerability modelling ...'  paper.
+
+If you have questions or troubles with the exercises, please drop me a
+mail.
+
+Ciao,
+Nicola
