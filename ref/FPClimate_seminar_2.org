@@ -1,0 +1,345 @@
+#+title: Vulnerability Modelling with Functional Programming and Dependent Types
+#+subtitle: FPClimate, Chalmers
+#+date: 2024-04-08
+#+author: Cezar Ionescu 
+#+email: cezar.ionescu@th-deg.de
+#+STARTUP: showeverything
+#+language: de
+#+OPTIONS: H:2 toc:t num:t
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [presentation, smaller]
+#+LaTeX_HEADER: \geometry{paperwidth=140mm,paperheight=105mm}
+#+LaTeX_HEADER: \setbeamertemplate{navigation symbols}{}
+#+LaTeX_HEADER: \setbeamercovered{transparent}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \usepackage{xunicode}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{multirow}
+#+LATEX_HEADER: \usepackage{bussproofs}
+#+LATEX_HEADER: \usepackage{color, soul}
+#+LATEX_HEADER: \newcommand{\Real}{\mathbb{R}}
+#+LATEX_HEADER: \newcommand{\Nat}{\mathbb{N}}
+#+LATEX_HEADER: \newcommand{\Int}{\mathbb{Z}}
+#+LATEX_HEADER: \newcommand{\Rat}{\mathbb{Q}}
+#+LATEX_HEADER: \newcommand{\Pow}{\mathbb{P}}
+#+LATEX_HEADER: \newcommand{\Bool}{\mathbb{B}}
+#+LATEX_HEADER: \renewcommand{\SS}{\mathbb{S}}
+#+LATEX_HEADER: \newcommand{\Complex}{\mathbb{C}}
+#+LATEX_HEADER: \setmainfont[Mapping=tex-text,Scale=0.8]{DejaVuSans}
+#+LATEX_HEADER: \setmonofont[Mapping=tex-text,Scale=0.8]{DejaVuSansMono}
+#+latex_header: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
+#+LATEX_HEADER: \usepackage{xpatch}
+#+LATEX_HEADER: \makeatletter\AtBeginEnvironment{minted}{\dontdofcolorbox}\def\dontdofcolorbox{\renewcommand\fcolorbox[4][]{##4}}\xpatchcmd{\inputminted}{\minted@fvset}{\minted@fvset\dontdofcolorbox}{}{}\makeatother
+#+BEAMER_THEME: Madrid
+#+BEAMER_HEADER: \titlegraphic{\includegraphics[height=0.5cm]{/home/ionescu/thd/images/thd.jpg}}
+#+BEAMER_HEADER: \author[]{Cezar Ionescu \newline \scriptsize{cezar.ionescu@th-deg.de}}
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+* Context
+
+** Algebra of Programming
+
+| |
+
+*** Col left                                                          :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.35
+   :END:
+
+#+LATEX: \includegraphics[width=\textwidth]{/home/ionescu/thd/images/aop_cover.png}
+
+*** Col right                                                         :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.5
+   :END:
+
+#+LATEX: \includegraphics[width=\textwidth]{/home/ionescu/thd/images/bird.jpg}
+
+Richard Bird (1943-2022) (image from Wikipedia)
+
+** Algebra of Programming
+
+   Ideas: 
+
+   - /Category theory/ is an extensible language for precisely
+     formulating mathematical theories (concepts, models, etc.).
+
+   - One such extension is particularly well-suited for formulating
+     /functional programs/.  Further extensions allow us to formulate
+     /specifications/.
+
+   - There are other frameworks with similar properties: higher-order
+     logics (dependent types), Hoare logics, etc.  The categorical
+     framework is good for /equational reasoning/.
+
+** Potsdam Institute for Climate Impact Research
+
+   #+begin_quote
+   At PIK researchers in the natural and social sciences work together
+   to study global change and its impacts on ecological, economic and
+   social systems. They examine the Earth system's capacity for
+   withstanding human interventions and devise strategies for a
+   sustainable development of humankind and nature.
+
+   PIK research projects are interdisciplinary and undertaken by
+   scientists from the following Research Domains: Earth System
+   Analysis, Climate Impacts and Vulnerabilities, Sustainable Solutions
+   and Transdisciplinary Concepts and Methods.
+   #+end_quote
+
+   (PIK home page, cca 2010)
+
+** Potsdam Institute for Climate *Impact* Research
+
+   #+begin_quote
+   At PIK researchers in the natural and social sciences work together
+   to study global change and its impacts on ecological, economic and
+   social systems. They examine *the Earth system's capacity for
+   withstanding human interventions* and devise strategies for a
+   *sustainable development* of humankind and nature.
+
+   PIK research projects are *interdisciplinary* and undertaken by
+   scientists from the following Research Domains: Earth System
+   Analysis, Climate Impacts and Vulnerabilities, Sustainable Solutions
+   and *Transdisciplinary* Concepts and Methods.
+   #+end_quote
+
+   (PIK home page, cca 2010)
+
+** Parallel Computing
+
+   A first attempt to apply the AoP ideas:
+
+   #+begin_center
+   #+LATEX: \includegraphics[width=0.8\textwidth]{/home/ionescu/thd/images/monadic_bsp.png}
+   #+end_center
+
+** Vulnerability
+
+   #+begin_quote
+   \ldots The complexity of the climate, ecological, social and
+   economic systems that researchers are modelling means that the validity
+   of scenario results will inevitably be subject to ongoing criticism.
+
+   \ldots What this criticism does, however, is emphasize the need for
+   a strong foundation upon which scenarios (\emph{i.e., modelling})
+   can be applied, a foundation that provides a basis for managing risk
+   despite uncertainties associated with future climate changes.
+
+   \emph{This foundation lies in the concept of vulnerability.}
+
+   #+end_quote
+
+   (from ``Climate Change Impacts and Adaptation: A Canadian
+   Perspective'', 2004)
+
+** DTP 10
+
+   The paper was drafted for DTP10 /Dependently-Typed Programming/,
+   Edinburgh.
+
+   [[https://web.archive.org/web/20100611072508/http://sneezy.cs.nott.ac.uk/darcs/dtp10/][DTP10]]
+
+   The first version was submitted in December 2010, the final version
+   was published online in ...December 2014, and the paper journal
+   version came out January 2016.
+
+* Vulnerability
+
+** Definitions (or ``Definitions'')
+
+   - UNDP Annual Report,  2004:
+
+     #+begin_quote
+     \ldots a human condition or process resulting from physical, social
+     and environmental factors which determine the likelihood and damage
+     from the impact of a given hazard
+     #+end_quote
+
+   - Cannon et al. 2004
+
+     #+begin_quote
+     Vulnerability [\ldots] is a way of conceptualizing what may happen
+     to an identifiable population under conditions of particular risk
+     and hazards.
+     #+end_quote
+
+   - The Intergovernmental Panel on Climate Change,  1995
+
+     #+begin_quote
+     \emph{vulnerability}: the extent to which climate change may damage
+     or harm a system.''
+     #+end_quote
+
+   - Institute for Environment and Security (United Nations University),
+     2004
+
+     #+begin_quote
+     Vulnerability is the intrinsic and dynamic feature of an element at
+     risk (community, region, state, infrastructure, environment, etc.)
+     that determines the expected damage or harm resulting from a given
+     hazardous event, and is often affected by the harmful event itself.
+     Vulnerability changes continuously over time and is driven by
+     physical, social, economic and environmental factors.
+     #+end_quote
+
+   \ldots many, many others (Thywissen 2006 lists 32 more)
+
+** ODE
+
+   *vulnerable* (adj.): 
+
+   1. exposed to the possibility of being attacked or harmed, either
+      physically or emotionally: /we were in a vulnerable position/ |
+      /small fish are *vulnerable* to predators/ 
+
+   2. Bridge (of a partnership) liable to higher penalties, either by
+      convention or through having won one game towards a rubber.
+
+   (Oxford Dictionary of English, 2010)
+
+** The Structure of Vulnerability
+
+   #+begin_src haskell
+   possible       ::  Functor f => State -> f Evolution
+
+   harm           ::  Preorder v => Evolution -> v
+
+   measure        ::  Functor f, Preorder v, Preorder w => f v -> w
+
+   vulnerability  ::  Preorder w => State -> w
+
+   vulnerability  =   measure . fmap harm . possible
+   #+end_src
+
+** Example
+
+   Calvo and Dercon (2005):
+
+    \begin{itemize}
+	\item Vulnerability measures a set of outcomes across possible
+	states of the world.  These states of the world are assumed to be in
+	finite number and come with associated probabilities.
+	\item Poverty is defined in terms of a threshold, which has the same
+	value in all states of the world.
+	\item The states of the world in which the outcomes are above the
+	threshold do not enter in the vulnerability measurement (this is
+	called the ``axiom of focus'').
+	\item Monotonicity requirements: the likelier the outcomes below the
+	threshold,  and the greater their distance to the threshold, the
+	greater the vulnerability.
+    \end{itemize}
+
+** Example (from paper)
+
+   #+begin_src haskell
+> V = sum [p i * v (x i) | i <- [1 .. n]]
+
+where
+
+> n :: Nat           -- the number of possible states of the world
+> p :: Nat -> [0, 1] -- p i is the probability of state i
+> v :: Real -> Real  -- a monotonically decreasing and convex function
+> x i = (y i) / z    -- relative distance to threshold of outcome i
+> y :: Nat -> Real   -- y i is the outcome in state i if below the
+>                    -- threshold, 0 otherwise
+> z :: Real          -- the threshold
+   #+end_src
+
+   Exercise: Does this fit the structure of vulnerability?  How / why not?
+
+* Applications
+
+** Insight  
+
+   ``Small fish are vulnerable to predators.''
+
+   #+begin_src haskell
+   possible :: State -> [Evolution]
+
+   predators :: Evolution -> Bool
+   wounded :: Evolution -> Bool
+
+   harm :: Evolution -> Bool
+   harm = wounded ∧ predators
+   #+end_src
+
+   - Vulnerability is here a predicate on /states/ (transferred
+     epithtet)
+
+   - Factors of interest (/predators/) and impacts to assess (/wounded/)
+     play a symmetric role
+   
+** Monotonicity Condition for Vulnerability Measures
+
+   Vulnerability measures should be ``monotonous''.  If every harm value
+   in the structure increases, the structure remaining the same, then
+   the aggregated value should also increase (``increasing'' is
+   *non-strict*).
+
+   For all ~inc : V -> V~ increasing (~inc v ⊒ v~), we have for all ~v ∈
+   F V~
+
+   #+begin_src haskell
+   measure (fmap inc v) ⊒ measure v
+   #+end_src
+
+   ``Most common harm value'' does not fulfil this condition!
+
+   E.g., ~[1, 2, 3, 10, 10]~ worse than ~[4, 4, 4, 11, 11]~!
+
+** Compatibility
+
+   - natural transformation between representations of possibility
+
+     #+begin_src haskell
+     τ :: F1 a -> F2 a
+     #+end_src
+
+   - vulnerability measures of the ``same kind''
+
+     #+begin_src haskell
+     m1 :: F1 V -> W
+
+     m2 :: F2 V -> W
+     #+end_src
+
+   - compatibility w.r.t. ~τ~
+
+     #+begin_src haskell
+     m1 v1 ⊒ m1 v2 ⇒ m2 (τ v1) ⊒ m2 (τ v2)
+     #+end_src
+
+   - reuse: ~m2 . τ~ is compatible with ~m2~
+     
+   *Exercise:* What are the ``minimal'' categories involved?
+
+** Software Correctness
+
+   Enter dependent types (under the influence of Patrik Jansson).
+
+   We started moving the categorical machinery to the new framework,
+   leading to many developments (see the rest of the FPClimate papers).
+
+   There is still a certain ``friction'' between categorical frameworks
+   and the depedently typed ones which have largely superseded them, as
+   illustrated by [[https://www.cs.ox.ac.uk/publications/books/adwh/][Richard Bird's last book]] (together with Jeremy
+   Gibbons).
+
+* Conclusions
+
+** Conclusions
+
+   Main idea: formulate problems as programming correctness problems!
+
+   This can be useful in contexts where simulation is used to replace
+   experiments (climate science, social science, political theory,
+   etc.).
+
+   Type theory can formulate both correctness conditions and the
+   programs themselves.  Moreover, the correctness proofs are then
+   mechanically checked.
+
+   *Meta-exercise:* find and correct all the errors in the article.
+
