@@ -1,0 +1,3 @@
+* Some code from the "tesing vs. proving" paper
++ Needs updates to work with current Agda.
+  
