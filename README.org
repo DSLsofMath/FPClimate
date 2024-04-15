@@ -95,7 +95,32 @@ successful completion of the course.
 ** TODO Present and discuss solutions to exercises from the previous seminar
 ** TODO (after the seminar) solve W15 exercises
 * Week 16:
-** FPClimate seminar 3
+** FPClimate seminar 3: Discussion about the current paper: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
++ Exercises: (informally: "re-implement the paper")
+*** Q1 (About definition 1): Consider the case
+    F = Vec 3 (a vector of length 3);
+    V = Rational; and
+    x1, x2 : F V
+    x1 = [1, 1, 1];
+    x2 = [1, 2, 1];
+  + Q1a: What does Def. 1 say about m x1 in relation to m x2?
+  + Q1b: What do you think it should say?
+  + Q1c: Can you suggest another Def 1' (which is stronger / stricter
+    than Def. 1) and captures this case?
+*** Q2: Implement some of the Haskell code in section 3 to get a feeling for what can go wrong.
+  + Q2a: Find counterexamples to sumList and to supList being
+    vulnerability measures.
+  + Q2b: Re-implement with Rational instead of Float. Are they correct
+    now?
+*** Q3: Implement (part of) the code for section 4
+  + (starting from the paper or from the subdirectory
+    file:ref/test-vs-proof/).
+  + Q3a: To get started with Agda, implement a self-contained version
+    of the code up to FunctorList (with minimal imports).
+  + Q3b: Make the definition of VulnMeas work (type check) for a
+    recent version of Agda and its standard library.
+  + Q3c: Implement foldMeas based on a suitable number of postulates
+    for the properties you need.
 * Week 17:
 ** FPClimate seminar 4
 * Week 18:
