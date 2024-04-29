@@ -98,11 +98,13 @@ successful completion of the course.
 ** FPClimate seminar 3: Discussion about the current paper: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
 + Exercises: (informally: "re-implement the paper")
 *** Q1 (About definition 1): Consider the case
+#+BEGIN_SRC pseudocode
     F = Vec 3 (a vector of length 3);
     V = Rational; and
     x1, x2 : F V
     x1 = [1, 1, 1];
     x2 = [1, 2, 1];
+#+END_SRC
   + Q1a: What does Def. 1 say about m x1 in relation to m x2?
   + Q1b: What do you think it should say?
   + Q1c: Can you suggest another Def 1' (which is stronger / stricter
