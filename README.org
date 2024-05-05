@@ -87,9 +87,15 @@ successful completion of the course.
 + Then Patrik presented some introductory material (see the slides)
   about equations, problems, solutions, specifications,
   domain-specific languages, etc.
++ In the course we use logic and functional programming notation
+  (mostly Haskell and Agda) to specify, implement, and test concepts
+  from Climate Impact Research.
 + Brief introduction to some relevant domain-specific notions:
   prisoner's dilemma, stragegy profile, Nash equilibrium, policies,
   optimality, agent-based models, green growth, equational reasoning.
++ Homework for next seminar:
+  + solve the exercises and
+  + actively read [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]] in preparation for the seminar by Cezar Ionescu.
 + Next up is an invited talk:
 ** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
 + [[https://intranet.chalmers.se/en/current/calendar/2024/03/26/functional-programming-for-the-planet---28373][Announced separately]] [will be in room HB2]
