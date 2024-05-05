@@ -80,7 +80,17 @@ successful completion of the course.
 
 * Week 13:
 ** FPClimate seminar 1
-+ Introduction (Patrik Jansson)
++ [[file:ref/FPClimate_seminar_1.pdf][Introduction slides (Patrik Jansson)]] including exercises
++ We did a round of introductions, followed by an introduction by
+  Patrik to the course (prerequisites, contents, examination, learning
+  outcomes, schedule, first few weeks).
++ Then Patrik presented some introductory material (see the slides)
+  about equations, problems, solutions, specifications,
+  domain-specific languages, etc.
++ Brief introduction to some relevant domain-specific notions:
+  prisoner's dilemma, stragegy profile, Nash equilibrium, policies,
+  optimality, agent-based models, green growth, equational reasoning.
++ Next up is an invited talk:
 ** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
 + [[https://intranet.chalmers.se/en/current/calendar/2024/03/26/functional-programming-for-the-planet---28373][Announced separately]] [will be in room HB2]
 + Title: (Functional) Programming for the Planet
