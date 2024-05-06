@@ -146,6 +146,7 @@ successful completion of the course.
 + Lecture by Nicola Botta
 * Week 19:
 ** FPClimate seminar 6
++ [[file:ref/FPClimate_seminar_6/FPClimate_seminar_6.pdf][Lecture slides (by Nicola Botta)]]
 * Week 20:
 ** FPClimate seminar 7
 * Week 21:
