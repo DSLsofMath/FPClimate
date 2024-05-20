@@ -151,10 +151,33 @@ successful completion of the course.
 ** FPClimate seminar 7
 * Week 21:
 ** FPClimate seminar 8
-+ Lecture by Nicola Botta
+** TODO new exercises for S8 / paper 8
++ implement Backwards induction in different languages (one per person)
+  + Prel. plan:
+    Agda (Oskar),
+    Haskell (Janek),
+    Python (Adrian),
+    Purescript (Nicolas),
+    Rust (Tobias),
+    Julia (Jayson)
++ and apply it to 2-3 simple examples [generation problem, random walk, your favorite!]
++ More concretely:
+  + compute an optimal policy sequence (for, say, n=3 steps)
+  + compute all trajectories (or a sample)
+  + sort them by probability
+  + show the first few examples
+  + say something about the computational cost (complexity)
++ You don't need to prove correctness, or implement the dependent
+  types, but you need to have a "generic" solver so that a user can
+  supply a sequential decision problem (X, Y, next, reward, ...) and
+  get a solution (a sequence of optimal policies).
++ You can assume that the state and action types are finite, so that
+  the solution space also is finite.
++ Make sure to provide some test cases and expected outputs.
 * Week 22:
 ** FPClimate seminar 9
-
++ Lecture by Nicola Botta
++ Week 
 * How to register
 
 + If you do not need formal credits, you can just contact Patrik Jansson.

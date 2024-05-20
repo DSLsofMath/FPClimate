@@ -189,15 +189,15 @@ r1 = fairDice
 r2 : SP Dice
 r2 = biasedDice
 
-next : Dice -> SP Dice
-next one   =  ηSP one
-next two   =  r2
-next three =  r2
-next four  =  r2
-next five  =  ηSP five
-next six   =  r2
+example : Dice -> SP Dice
+example one   =  ηSP one
+example two   =  r2
+example three =  r2
+example four  =  r2
+example five  =  ηSP five
+example six   =  r2
 
--- prob (r1 >>=SP next) ((eq five) or (eq six))
+-- prob (r1 >>=SP example) ((eq five) or (eq six))
 
 -- TODO: Implement the Monty Hall problem ...
 
