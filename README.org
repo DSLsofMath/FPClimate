@@ -107,7 +107,49 @@ successful completion of the course.
 ** TODO read and prepare questions for "[[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling ...]]" paper
 * Week 15:
 ** FPClimate seminar 2
-+ Lecture by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling]]
++ Lecture ([[file:ref/FPClimate_seminar_2.pdf][slides]], [[file:ref/FPClimate_seminar_2.org][source]]) by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability Modelling with Functional Programming and Dependent Types]]
+  + (Prof. Ionescu very sadly passed away after severe illness in October 2024.)
++ Background: Algebra of Programming (the book, by Richard Bird and Ooge de Moor)
+  - Category theory is an extensible language for precisely formulating mathematical theories (concepts, models, etc.).
+  - One such extension is particularly well-suited for formulating /functional programs/.
+  - Further extensions allow us to formulate /specifications/.
+  - There are other frameworks with similar properties: higher-order logics (dependent types), Hoare logics, etc.
+  - The categorical framework is good for /equational reasoning/.
++ Potsdam Institute for Climate *Impact* Research (PIK)
+  + The work described in this lecture (and this course) started at PIK, around 2010.
+  + Relation-based computations in a monadic BSP model [Botta, Ionescu, 2007] [[https://doi.org/10.1016/j.parco.2007.08.002][doi:10.1016/j.parco.2007.08.002]], [[https://publications.pik-potsdam.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_14222][PIK page]]
++ Vulnerability modelling [the paper this seminar is about]
+  + Motivated by a surge in "Vulnerability assessment" work in the climate change community.  
+  + Cezar's paper first submitted in 2010, published 2014, Journal version 2016!
+  + [[doi:10.1017/S0960129514000139]["Vulnerability Modelling with Functional Programming and Dependent Types"]] [Ionescu, 2016] [[https://doi.org/10.1017/S0960129514000139][doi:10.1017/S0960129514000139]]
++ Definitions
+  + There were _many_ attempts at defining "vulnerability" around 2000 [Thywissen 2006 lists 36!]
++ The Structure of Vulnerability (according to [Ionescu, 2016])
+   #+begin_src haskell
+   possible       ::  Functor f => State -> f Evolution
+
+   harm           ::  Preorder v => Evolution -> v
+
+   measure        ::  Functor f, Preorder v, Preorder w => f v -> w
+
+   vulnerability  ::  Preorder w => State -> w
+
+   vulnerability  =   measure . fmap harm . possible
+   #+end_src
+  + The paper presents a few examples which fit this structure.
++ Vulnerability measures
+  + should be monotonic
+  + can be related by natural transformations between representations of possibility
+  + should be "compatible"
++ Next stage: dependent types
+  + (under the influence of Patrik Jansson)
+  + moving the categorical machinery to the new framework
++ Conclusions
+  + Main idea: formulate problems as programming correctness problems!
+  + This can be useful in contexts where simulation is used to replace experiments (climate science, social science, political theory, etc.).
+  + Type theory can formulate both correctness conditions and the programs themselves.
+  + Moreover, the correctness proofs are then mechanically checked.
+    
 ** TODO Present and discuss solutions to exercises from the previous seminar
 ** TODO (after the seminar) solve W15 exercises
 * Week 16:
@@ -160,7 +202,7 @@ successful completion of the course.
     Purescript (Nicolas),
     Rust (Tobias),
     Julia (Jayson)
-+ and apply it to 2-3 simple examples [generation problem, random walk, your favorite!]
++ and apply it to 2-3 simple examples [generation problem, random walk, your favourite!]
 + More concretely:
   + compute an optimal policy sequence (for, say, n=3 steps)
   + compute all trajectories (or a sample)
