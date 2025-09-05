@@ -1,5 +1,8 @@
 * FPClimate
-PhD course on "Functional Programming and Climate Impact Research", spring term 2024, study period 4.
+PhD course on "Functional Programming and Climate Impact Research"
+
++ First instance: spring term 2024, end of March - May/June.
++ Second instance: prel. mid March - May/June 2026 (TBD)
 
 *Abstract*: This is a course aimed at PhD students or MSc students
 interested in the application of functional programming,
@@ -9,7 +12,7 @@ research.
 *Note*. This course is run as a seminar / reading course.
 Therefore, you must have the motivation and capacity to digest material with limited teacher presence.
 
-** Lecture / seminar / reading plan
+** Lecture / seminar / reading plan (2024)
 The course is based on material from the following research papers:
 + Week 15: read 2010: [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]]
 + Week 16: read 2011: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
@@ -74,8 +77,7 @@ successful completion of the course.
 | [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 15.15-17.00 | FPClimate seminar 9                 | EDIT 6128 |
 
 + Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
-+ For local participants, the room is EDIT 6128 (at Chalmers campus
-  Johanneberg) for most seminars.
++ For local participants, the room is EDIT 6128 (at Chalmers campus Johanneberg) for most seminars.
 + For remote participants, the zoom link is almost https://chalmers.zoom.us/my/CUTpatrikja but without the upper case letters.
 
 * Week 13:
