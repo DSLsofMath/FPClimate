@@ -1,0 +1,231 @@
+* FPClimate 2024
+PhD course on "Functional Programming and Climate Impact Research"
+
++ First instance: spring term 2024, end of March - May/June.
++ Second instance info [[README.org][end of March - May/June 2026]]
+
+** Abstract
+This is a course aimed at PhD students or MSc students interested in the application of functional programming, domain-specific languages, and dependent types to climate impact research.
+
+*Note*. This course is run as a seminar / reading course. Therefore, you must have the motivation and capacity to digest material with limited teacher presence.
+
+** Lecture / seminar / reading plan (2024)
+The course is based on material from the following research papers:
++ Week 15: read 2010: [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]]
++ Week 16: read 2011: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
++ Week 17: read 2012: [[file:ref/2012_DepTy_SciComp_978-3-642-41582-1_9.pdf][Dependently-Typed Programming in Scientific Computing - Examples from Economic Modelling]]
++ Week 18: read 2014: [[file:ref/2014_Jansson-Patrik-Computational-Theory-of-GSS.pdf][Towards a Computational Theory of GSS: a Case for Domain-Specific Languages]]
++ Week 19: read 2017: [[file:ref/2017a_SeqDecProb1.pdf][Sequential decision problems, dependent types and generic solutions]]
++ Week 20: read 2017: [[file:ref/2017b_contributions-to-a-computational-theory-of-policy-advice-and-avoidability.pdf][Contributions to a computational theory of policy advice and avoidability]]
++ Week 21: read 2018: [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]
++ Week 22: read 2023: [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]
+
+Good background reading is provided by:
++ The 2023 book "[[https://www.cambridge.org/core/books/computing-the-climate/64DAAC995DC84241F8D8605B3779C68A][Computing the Climate]]" by Steve M. Easterbrook
++ The 2022 book "[[https://www.adlibris.com/se/bok/domain-specific-languages-of-mathematics-9781848903883][Domain-Specific Languages of Mathematics]]" by Jansson, Ionescu, Bernardy.
+
+** Examination
+The course is examined through:
+
++ a sequence of graded hand-ins (solutions to exercises to be further specified during the course)
++ active participation in most of the weekly seminars
+
+The plan is to award 7.5 higher education credits ([[https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system][ECTS]]) upon successful completion of the course.
+
+** Prerequisites
++ BSc degree in Computer Science and Engineering or equivalent.
++ Functional programming (ideally in Haskell, but other languages are also OK)
++ Formal methods (ideally using dependent types, but other methods are also OK)
+
+** Learning outcomes
+After completion of the course the student should be able to:
++ Use functional programming specification / implementation / formalisation as a way of understanding new domains
++ Understand a selection of topics in Climate Impact Research
++ Effectively use Haskell and Agda for formalisation
+
+*** Knowledge and understanding
++ Master the terminology, concepts and theories associated with the selected area;
++ Demonstrate deep knowledge and understanding in the area of the course, and insight into current research and development;
++ Demonstrate deep methodological knowledge in the area of the course;
+
+*** Skills and abilities
++ Demonstrate the ability to critically and systematically integrate knowledge and to analyse, assess, and deal with complex issues in the area of the course;
+
+*** Judgement and approach
++ Search for, and extract, necessary information from scientific publications in the selected area of the course, with the purpose of identifying strengths and weakness of solutions, approaches and methodologies.
+
+** Scheduling
++ The course will start in March (2024-03-25) and end in May or June.
++ The schedule is available below:
+
+| Week | Date           |        Time | Event                               | Room      |
+|------+----------------+-------------+-------------------------------------+-----------|
+| [[https://weeknumber.net/?q=13][13]]   | Mon 2024-03-25 | 15.15-17.00 | FPClimate seminar 1                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=13][13]]   | Tue 2024-03-26 | 14.15-15.15 | Talk by Anil Madhavapeddy           | HB2       |
+| [[https://weeknumber.net/?q=14][14]]   | (Patrik away)  |             |                                     |           |
+| [[https://weeknumber.net/?q=15][15]]   | Mon 2024-04-08 | 15.15-17.00 | FPClimate seminar 2 (Cezar Ionescu) | EDIT 6128 |
+| [[https://weeknumber.net/?q=16][16]]   | Mon 2024-04-15 | 15.15-17.00 | FPClimate seminar 3                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=17][17]]   | Mon 2024-04-22 | 15.15-17.00 | FPClimate seminar 4                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=18][18]]   | Mon 2024-04-29 | 15.15-17.00 | FPClimate seminar 5 (Nicola Botta)  | EDIT 6128 |
+| [[https://weeknumber.net/?q=19][19]]   | Mon 2024-05-06 | 15.15-17.00 | FPClimate seminar 6                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=20][20]]   | Mon 2024-05-13 | 15.15-17.00 | FPClimate seminar 7                 | EDIT 6128 |
+| [[https://weeknumber.net/?q=21][21]]   | Mon 2024-05-20 | 15.15-17.00 | FPClimate seminar 8 (Nicola Botta)  | EDIT 5128 |
+| [[https://weeknumber.net/?q=22][22]]   | Mon 2024-05-27 | 15.15-17.00 | FPClimate seminar 9                 | EDIT 6128 |
+
++ Time zone: CET (UTC+1) in week 13 (until 2024-03-30), then CEST (UTC+2) from week 14 onwards.
++ For local participants, the room is EDIT 6128 (at Chalmers campus Johanneberg) for most seminars.
++ For remote participants, the zoom link is almost https://chalmers.zoom.us/my/CUTpatrikja but without the upper case letters.
+
+* Week 13:
+** FPClimate seminar 1
++ [[file:ref/FPClimate_seminar_1.pdf][Introduction slides (Patrik Jansson)]] including exercises
++ We did a round of introductions, followed by an introduction by
+  Patrik to the course (prerequisites, contents, examination, learning
+  outcomes, schedule, first few weeks).
++ Then Patrik presented some introductory material (see the slides)
+  about equations, problems, solutions, specifications,
+  domain-specific languages, etc.
++ In the course we use logic and functional programming notation
+  (mostly Haskell and Agda) to specify, implement, and test concepts
+  from Climate Impact Research.
++ Brief introduction to some relevant domain-specific notions:
+  prisoner's dilemma, strategy profile, Nash equilibrium, policies,
+  optimality, agent-based models, green growth, equational reasoning.
++ Homework for next seminar:
+  + solve the exercises and
+  + actively read [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]] in preparation for the seminar by Cezar Ionescu.
++ Next up is an invited talk:
+** Talk by [[https://4c.cst.cam.ac.uk/staff/professor-anil-madhavapeddy][Prof. Anil Madhavapeddy]]
++ [[https://intranet.chalmers.se/en/current/calendar/2024/03/26/functional-programming-for-the-planet---28373][Announced separately]] [will be in room HB2]
++ Title: (Functional) Programming for the Planet
++ Abstract: As simultaneous crises in emissions and biodiversity sweep the planet, computer systems that analyse the complex interplay of our globe’s health are ever more crucial to guiding policy decisions about how to get out of the mess we’re in. In this talk, we examine how functional programming can contribute to building systems that are more resilient, predictable and reproducible in the face of huge amounts of input data (such as from satellites and ground sensing) that demands precise access control (or else poachers and malicious actors go straight to the source) and requires interactive exploration from non-CS-experts at different levels of the software stack (to do climate science). We will also highlight how our ongoing cross-disciplinary research is having a real impact on conservation projects that are sorely underserved by current systems/PL infrastructure, and also how we went about forging these links. We hope to encourage some of you to form your own local collaborations with your colleagues working on the climate crisis!
++ For those who missed it, there is a closely related [[https://www.youtube.com/watch?v=RH1sKJMZI3g][recorded keynote from ICFP 2023]].
+* Week 14:
+** TODO solve W13 exercises ([[file:ref/FPClimate_seminar_1.pdf][FPClimate_seminar_1.pdf)]] and W15 preparation exercises ([[file:ref/seminar_2_exercises.pdf][ref/seminar_2_exercises.pdf]])
+** TODO read and prepare questions for "[[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling ...]]" paper
+* Week 15:
+** FPClimate seminar 2
++ Lecture ([[file:ref/FPClimate_seminar_2.pdf][slides]], [[file:ref/FPClimate_seminar_2.org][source]]) by [[https://www.th-deg.de/en/Cezar-Ionescu-Fakult%C3%A4t%20Angewandte%20Informatik-Professor:innen-1975][Prof. Cezar Ionescu]] about [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability Modelling with Functional Programming and Dependent Types]]
+  + (Prof. Ionescu very sadly passed away after severe illness in October 2024.)
++ Background: Algebra of Programming (the book, by Richard Bird and Ooge de Moor)
+  - Category theory is an extensible language for precisely formulating mathematical theories (concepts, models, etc.).
+  - One such extension is particularly well-suited for formulating /functional programs/.
+  - Further extensions allow us to formulate /specifications/.
+  - There are other frameworks with similar properties: higher-order logics (dependent types), Hoare logics, etc.
+  - The categorical framework is good for /equational reasoning/.
++ Potsdam Institute for Climate *Impact* Research (PIK)
+  + The work described in this lecture (and this course) started at PIK, around 2010.
+  + Relation-based computations in a monadic BSP model [Botta, Ionescu, 2007] [[https://doi.org/10.1016/j.parco.2007.08.002][doi:10.1016/j.parco.2007.08.002]], [[https://publications.pik-potsdam.de/pubman/faces/ViewItemOverviewPage.jsp?itemId=item_14222][PIK page]]
++ Vulnerability modelling [the paper this seminar is about]
+  + Motivated by a surge in "Vulnerability assessment" work in the climate change community.
+  + Cezar's paper first submitted in 2010, published 2014, Journal version 2016!
+  + [[doi:10.1017/S0960129514000139]["Vulnerability Modelling with Functional Programming and Dependent Types"]] [Ionescu, 2016] [[https://doi.org/10.1017/S0960129514000139][doi:10.1017/S0960129514000139]]
++ Definitions
+  + There were _many_ attempts at defining "vulnerability" around 2000 [Thywissen 2006 lists 36!]
++ The Structure of Vulnerability (according to [Ionescu, 2016])
+   #+begin_src haskell
+   possible       ::  Functor f => State -> f Evolution
+
+   harm           ::  Preorder v => Evolution -> v
+
+   measure        ::  Functor f, Preorder v, Preorder w => f v -> w
+
+   vulnerability  ::  Preorder w => State -> w
+
+   vulnerability  =   measure . fmap harm . possible
+   #+end_src
+  + The paper presents a few examples which fit this structure.
++ Vulnerability measures
+  + should be monotonic
+  + can be related by natural transformations between representations of possibility
+  + should be "compatible"
++ Next stage: dependent types
+  + (under the influence of Patrik Jansson)
+  + moving the categorical machinery to the new framework
++ Conclusions
+  + Main idea: formulate problems as programming correctness problems!
+  + This can be useful in contexts where simulation is used to replace experiments (climate science, social science, political theory, etc.).
+  + Type theory can formulate both correctness conditions and the programs themselves.
+  + Moreover, the correctness proofs are then mechanically checked.
+
+** TODO Present and discuss solutions to exercises from the previous seminar
+** TODO (after the seminar) solve W15 exercises
+* Week 16:
+** FPClimate seminar 3: Discussion about the current paper: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
++ Exercises: (informally: "re-implement the paper")
+*** Q1 (About definition 1): Consider the case
+#+BEGIN_SRC pseudocode
+    F = Vec 3 (a vector of length 3);
+    V = Rational; and
+    x1, x2 : F V
+    x1 = [1, 1, 1];
+    x2 = [1, 2, 1];
+#+END_SRC
+  + Q1a: What does Def. 1 say about m x1 in relation to m x2?
+  + Q1b: What do you think it should say?
+  + Q1c: Can you suggest another Def 1' (which is stronger / stricter
+    than Def. 1) and captures this case?
+*** Q2: Implement some of the Haskell code in section 3 to get a feeling for what can go wrong.
+  + Q2a: Find counterexamples to sumList and to supList being
+    vulnerability measures.
+  + Q2b: Re-implement with Rational instead of Float. Are they correct
+    now?
+*** Q3: Implement (part of) the code for section 4
+  + (starting from the paper or from the subdirectory
+    file:ref/test-vs-proof/).
+  + Q3a: To get started with Agda, implement a self-contained version
+    of the code up to FunctorList (with minimal imports).
+  + Q3b: Make the definition of VulnMeas work (type check) for a
+    recent version of Agda and its standard library.
+  + Q3c: Implement foldMeas based on a suitable number of postulates
+    for the properties you need.
+* Week 17:
+** FPClimate seminar 4
+* Week 18:
+** FPClimate seminar 5
++ Lecture by Nicola Botta
+* Week 19:
+** FPClimate seminar 6
++ [[file:ref/FPClimate_seminar_6/FPClimate_seminar_6.pdf][Lecture slides (by Nicola Botta)]]
+* Week 20:
+** FPClimate seminar 7
+* Week 21:
+** FPClimate seminar 8
+** TODO new exercises for S8 / paper 8
++ implement Backwards induction in different languages (one per person)
+  + Prel. plan:
+    Agda (Oskar),
+    Haskell (Janek),
+    Python (Adrian),
+    Purescript (Nicolas),
+    Rust (Tobias),
+    Julia (Jayson)
++ and apply it to 2-3 simple examples [generation problem, random walk, your favourite!]
++ More concretely:
+  + compute an optimal policy sequence (for, say, n=3 steps)
+  + compute all trajectories (or a sample)
+  + sort them by probability
+  + show the first few examples
+  + say something about the computational cost (complexity)
++ You don't need to prove correctness, or implement the dependent
+  types, but you need to have a "generic" (polymorphic / parametric)
+  solver so that a user can supply a sequential decision problem (X,
+  Y, next, reward, ...) and get a solution (a sequence of optimal
+  policies).
++ You can assume that the state and action types are finite, so that
+  the solution space also is finite.
++ Make sure to provide some test cases and expected outputs.
+* Week 22:
+** FPClimate seminar 9
++ Lecture by Nicola Botta
+* Week 24:
+** FPClimate seminar 10 (wrap-up)
++ Thu 2024-06-13, 13:00-15:00, in room EDIT-5128
+* How to register
+
++ If you do not need formal credits, you can just contact Patrik Jansson.
++ If you want credits for your local MSc degree, contact the examiner for (DAT235/DIT577): [[https://www.cse.chalmers.se/~bove/][Ana Bove]]
++ If you want credits for your local PhD degree, obtain the approval of your supervisor and examiner, then contact Patrik Jansson.
+
+* Other resources
++ TODO add links to talks, etc. online
