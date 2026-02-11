@@ -61,6 +61,7 @@ After completion of the course the student should be able to:
 ** Scheduling (2026)
 + The course will start in March 2026 and end in May or June.
 + The schedule will be made available below (Dates TBD):
+  + Prel. Monday afternoons 15-17
 
 # | Week | Date | Time | Event | Room |
 # |------+------+------+-------+------|
