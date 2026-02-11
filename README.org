@@ -62,10 +62,10 @@ After completion of the course the student should be able to:
 + The course will start in March 2026 and end in May or June.
 + The schedule will be made available below (Dates TBD):
 
-| Week | Date | Time | Event | Room |
-|------+------+------+-------+------|
-| TBD | TBD | TBD | FPClimate seminar 1 | EDIT 6128 |
-| ... | ... | ... | ... | ... |
+# | Week | Date | Time | Event | Room |
+# |------+------+------+-------+------|
+# | TBD | TBD | TBD | FPClimate seminar 1 | EDIT 6128 |
+# | ... | ... | ... | ... | ... |
 
 + Time zone: CET (UTC+1) until end of March, then CEST (UTC+2).
 + For local participants, the room is usually EDIT 6128 (at Chalmers campus Johanneberg).
