@@ -7,22 +7,24 @@ PhD course on "Functional Programming and Climate Impact Research"
 ** Abstract
 This is a course aimed at PhD students or MSc students interested in the application of functional programming, domain-specific languages, and dependent types to climate impact research.
 
-*Note*. This course is run as a seminar / reading course. Therefore, you must have the motivation and capacity to digest material with limited teacher presence.
+*Note:* This course is run as a seminar / reading course. Therefore, you must have the motivation and capacity to digest material with limited teacher presence.
 
 ** Lecture / seminar / reading plan (2026)
-/The detailed schedule for 2026 is not yet settled (it depends on the participants' schedules)./
 
 The course is based on material from the following research papers:
-+ 2010: [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]]
-+ 2011: [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]
-+ 2012: [[file:ref/2012_DepTy_SciComp_978-3-642-41582-1_9.pdf][Dependently-Typed Programming in Scientific Computing - Examples from Economic Modelling]]
-+ 2014: [[file:ref/2014_Jansson-Patrik-Computational-Theory-of-GSS.pdf][Towards a Computational Theory of GSS: a Case for Domain-Specific Languages]]
-+ 2017: [[file:ref/2017a_SeqDecProb1.pdf][Sequential decision problems, dependent types and generic solutions]]
-+ 2017: [[file:ref/2017b_contributions-to-a-computational-theory-of-policy-advice-and-avoidability.pdf][Contributions to a computational theory of policy advice and avoidability]]
-+ 2018: [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]
-+ 2023: [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]
-+ 2025: [[https://arxiv.org/abs/2308.09481][Types, equations, dimensions and the Pi theorem]]
-+ 2026: [[https://arxiv.org/abs/2503.18561][Optimization under uncertainty: understanding orders and testing programs with specifications]]
+
+| Year | Topic         | Paper                                                                                         |
+|------+---------------+-----------------------------------------------------------------------------------------------|
+| 2010 | Vulnerability | [[file:ref/2010_Vulnerability_Modelling.pdf][Vulnerability modelling with functional programming and dependent types]]                       |
+| 2011 | TestvsProof   | [[file:ref/2011_TestingVsProving.pdf][Testing versus proving in climate impact research]]                                             |
+| 2012 | DTP_Econ      | [[file:ref/2012_DepTy_SciComp_978-3-642-41582-1_9.pdf][Dependently-Typed Programming in Scientific Computing - Examples from Economic Modelling]]      |
+| 2014 | GSS_DSL       | [[file:ref/2014_Jansson-Patrik-Computational-Theory-of-GSS.pdf][Towards a Computational Theory of GSS: a Case for Domain-Specific Languages]]                   |
+| 2017 | SDP_Dep       | [[file:ref/2017a_SeqDecProb1.pdf][Sequential decision problems, dependent types and generic solutions]]                           |
+| 2017 | Avoidability  | [[file:ref/2017b_contributions-to-a-computational-theory-of-policy-advice-and-avoidability.pdf][Contributions to a computational theory of policy advice and avoidability]]                     |
+| 2018 | Uncertainty   | [[file:ref/2018_esd-9-525-2018.pdf][The impact of uncertainty on optimal emission policies]]                                        |
+| 2023 | *MatterMost*  | [[file:ref/2023_MatterMost_s10666-022-09867-w.pdf][Responsibility Under Uncertainty: Which Climate Decisions Matter Most?]]                        |
+| 2025 | Dimensions    | [[https://arxiv.org/abs/2308.09481][Types, equations, dimensions and the Pi theorem]]                                               |
+| 2026 | *OUU*         | [[https://arxiv.org/abs/2503.18561][Optimization under uncertainty: understanding orders and testing programs with specifications]] |
 
 Good background reading is provided by:
 + The 2023 book "[[https://www.cambridge.org/core/books/computing-the-climate/64DAAC995DC84241F8D8605B3779C68A][Computing the Climate]]" by Steve M. Easterbrook
@@ -60,17 +62,28 @@ After completion of the course the student should be able to:
 
 ** Scheduling (2026)
 + The course will start in March 2026 and end in May or June.
-+ The schedule will be made available below (Dates TBD):
-  + Prel. Monday afternoons 15-17
++ Room: EDIT6128 for all seminars except Thu 2026-04-02 when it is in EDIT5128.
++ The seminars are usually 45min + break + 45min.
++ Below is the preliminary schedule (the later meetings may depend on the participants' schedules).
 
-# | Week | Date | Time | Event | Room |
-# |------+------+------+-------+------|
-# | TBD | TBD | TBD | FPClimate seminar 1 | EDIT 6128 |
-# | ... | ... | ... | ... | ... |
+| Session |       Date | Time      |
+|---------+------------+-----------|
+|       1 | 2026-03-23 | Mon 15.15 |
+|       2 | 2026-04-02 | Thu 10.00 |
+|       3 | 2026-04-07 | Tue 15.15 |
+|       4 | 2026-04-13 | Mon 15.15 |
+|       5 | 2026-04-20 | Mon 15.15 |
+|       6 | 2026-04-27 | Mon 15.15 |
+|       7 | 2026-05-04 | Mon 15.15 |
+|       8 | 2026-05-11 | Mon 15.15 |
+|       9 | 2026-05-18 | Mon 15.15 |
+|      10 | 2026-05-25 | Mon 15.15 |
+|      11 | 2026-06-01 | Mon 15.15 |
+|      12 | 2026-06-08 | Mon 15.15 |
 
 + Time zone: CET (UTC+1) until end of March, then CEST (UTC+2).
 + For local participants, the room is usually EDIT 6128 (at Chalmers campus Johanneberg).
-+ For remote participants, the zoom link is almost https://chalmers.zoom.us/my/CUTpatrikja but without the upper case letters.
++ For remote participants, the zoom link is almost =https://chalmers.zoom.us/my/CUTpatrikja= but without the upper-case letters.
 
 ** How to register
 + If you do not need formal credits, you can just contact Patrik Jansson.
