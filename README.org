@@ -12,7 +12,9 @@ This is a course aimed at PhD students or MSc students interested in the applica
 ** Lecture / seminar / reading plan (2026)
 
 + [[file:lectures/ouu1.pdf][Lecture 1 slides including exercises]] (1.1 - 1.12)
-  + TODO: solve exercises by next seminar
+  + TODO: read OUU paper up to section 2 and solve exercises by next seminar
++ [[file:lectures/ouu2.pdf][Lecture 2 slides including exercises]] (2.1 - 2.13)
+  + TODO: read OUU paper section 3 onwards and solve exercises by next seminar.
 
 *** Background
 The course is based on material from the following research papers:
