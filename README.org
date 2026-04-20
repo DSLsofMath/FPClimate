@@ -16,9 +16,9 @@ This is a course aimed at PhD students or MSc students interested in the applica
 + [[file:lectures/ouu2.pdf][Lecture 2 slides including exercises]] (2.1 - 2.13)
   + TODO: read OUU paper section 3 onwards and solve exercises by next seminar
 + Lecture 3 slides including exercises ([[lectures/ouu3.pdf][ouu3.pdf]] + [[file:~/github/patrikja/FPClimate/lectures/MM1.pdf][MM1.pdf]])
-  + TODO: start reading the MatterMost paper + solver exercises by next seminar
+  + TODO: start reading the MatterMost paper + solve exercises by next seminar
 + Lecture 4 slides including exercises ([[lectures/MM2.pdf][MM2.pdf]])
-  + TODO: reading the MatterMost paper + solver exercises by next seminar
+  + TODO: reading the MatterMost paper + solve exercises by next seminar
 *** Background
 The course is based on material from the following research papers:
 
