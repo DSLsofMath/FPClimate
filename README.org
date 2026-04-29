@@ -77,20 +77,20 @@ After completion of the course the student should be able to:
 + The seminars are usually 45min + break + 45min.
 + Below is the preliminary schedule (the later meetings may depend on the participants' schedules).
 
-| Session |       Date | Time      |           |
-|---------+------------+-----------+-----------|
-|       1 | 2026-03-23 | Mon 15.15 | OUU1      |
-|       2 | 2026-04-02 | Thu 10.00 | OUU2      |
-|       - | 2026-04-07 | Tue 15.15 | Cancelled |
-|       3 | 2026-04-13 | Mon 15.15 | OUU3      |
-|       4 | 2026-04-20 | Mon 15.15 |           |
-|       5 | 2026-04-27 | Mon 15.15 |           |
-|       6 | 2026-05-04 | Mon 15.15 |           |
-|       7 | 2026-05-11 | Mon 15.15 |           |
-|       8 | 2026-05-18 | Mon 15.15 |           |
-|       9 | 2026-05-25 | Mon 15.15 |           |
-|      10 | 2026-06-01 | Mon 15.15 |           |
-|      11 | 2026-06-08 | Mon 15.15 |           |
+| Session |       Date | Time      |            |
+|---------+------------+-----------+------------|
+|       1 | 2026-03-23 | Mon 15.15 | OUU1       |
+|       2 | 2026-04-02 | Thu 10.00 | OUU2       |
+|       - | 2026-04-07 | Tue 15.15 | Cancelled  |
+|       3 | 2026-04-13 | Mon 15.15 | OUU3 + MM1 |
+|       4 | 2026-04-20 | Mon 15.15 | MM2        |
+|       5 | 2026-04-27 | Mon 15.15 | MM3        |
+|       6 | 2026-05-04 | Mon 15.15 | MM4        |
+|       7 | 2026-05-11 | Mon 15.15 | MM5        |
+|       8 | 2026-05-18 | Mon 15.15 |            |
+|       9 | 2026-05-25 | Mon 15.15 |            |
+|      10 | 2026-06-01 | Mon 15.15 |            |
+|      11 | 2026-06-08 | Mon 15.15 |            |
 
 + Time zone: CET (UTC+1) until end of March, then CEST (UTC+2).
 + For local participants, the room is usually EDIT 6128 (at Chalmers campus Johanneberg).
