@@ -23,7 +23,7 @@ This is a course aimed at PhD students or MSc students interested in the applica
   + TODO: reading the MatterMost paper + solve exercises by next seminar
 + Lecture 6 slides including exercises ([[lectures/MM4.pdf][MM4.pdf]])
   + TODO: Solve exercises 7.1-7.12 by next seminar
-+ Lecture 7 slides including exercises ([[lectures/MM4.pdf][MM5.pdf]])
++ Lecture 7 slides including exercises ([[lectures/MM5.pdf][MM5.pdf]])
   + TODO: Solve exercises 8.* by next seminar        
 *** Background
 The course is based on material from the following research papers:
