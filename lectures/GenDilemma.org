@@ -1,0 +1,117 @@
+* 2026-05-18: Some experiments with the Generational Dilemma
+** The Generational Dilemma (Heitzig et al. 2018)
+The model represents the world in one of four states, where a generation in the 'active' state must choose between short-term greed and long-term safety.
++ GU (Good Unsafe) :: The active decision state. Society is wealthy and resources are plentiful, but there is a significant risk of collapse.
++ GS (Good Safe) :: An absorbing state. Society is wealthy, sustainable, and free from the risk of collapse.
++ B (Bad) :: An absorbing state. Climate catastrophe. Resources are depleted, and society is permanently ruined.
++ BT (Bad Temporary) :: A deterministic transition state. Society pays a heavy economic cost, but is guaranteed to enter the safe state (|GS|) next.
+
+While in |GU|, a generation has two actions:
++ a (Business as Usual) :: Gamble. Collect high short-term profits, but risk falling into |B|.
++ b (Transition) :: Play it safe. Pay the immediate economic cost to enter |BT|, securing |GS| for all future generations.
+
+** Rewards and discount
++ An asymmetric climate economics model:
+#+BEGIN_SRC agda
+reward : (t : ℕ) → (x : X t) → (y : Y t x) → X (suc t) → Real
+reward _ _ _ GU =   3.0  -- Business as usual: High short-term profits
+reward _ _ _ BT =  -2.0  -- Transition phase: Upfront economic cost
+reward _ _ _ GS =   2.5  -- Sustainable future: Good, but has green maintenance costs
+reward _ _ _ B  = -10.0  -- Climate catastrophe: Devastating, permanent ruin
+#+END_SRC
++ with 50% generational discount factor.
+** Modelling
++ In our formalization, a *Policy* is a function mapping each state to an action.
++ With four state, this can be seen as a four-tuple (or record) covering all states.
++ However, only the |GU| state has more than one possible action: |a| (gamble) or |b| (safe transition).
++ The other states (|GS|, |BT|, |B|) force a single, trivial action.
++ Thus, the entire policy's information content can be represented by a single letter.
+
++ By extension, a *Policy Sequence* over |n| steps is simply a string of these letters.
++ As seen in the results below, the optimal policies for this setup naturally take the run-length form |b^i a^j| (where |i j : Nat|).
+
++ Because choosing |b| transitions the system permanently out of |GU| (into |BT|, then |GS|), any actions listed in the sequence /after/ the first |b| are counterfactuals.
++ They represent what the policy /would/ dictate if the system were somehow still in |GU| at that future time step, even though the state machine makes returning impossible.
+
+
+-- 2D-labyrinth:
+-- a Policy is a direction to move in every position.
+-- a PolicySeq is a list of policies (a layered maps)
+-- probilistic "steering": move forward means say move forward in 80%, left or right in 10%, but never backwards
+
+** Execution Results (Policy sequence -> Expected value) by time horizon and "stay good"-probability:
+
+| pGU | n = 2         | n = 4            | n = 8            | n = 16            |
+|-----+---------------+------------------+------------------+-------------------|
+| 0.5 | b^2 -> -0.750 | b^4 -> 0.188     | b^8 -> 0.480     | b^16 -> 0.500     |
+| 0.6 | b^2 -> -0.750 | b^4 -> 0.188     | b^8 -> 0.480     | b^16 -> 0.500     |
+| 0.7 | b a -> -0.750 | b^3 a -> 0.188   | b^7 a -> 0.480   | b^15 a -> 0.500   |
+| 0.8 | a^2 -> -0.440 | b^2 a^2 -> 0.188 | b^6 a^2 -> 0.480 | b^14 a^2 -> 0.500 |
+| 0.9 | a^2 -> 1.965  | a^4 -> 1.650     | a^8 -> 1.315     | a^16 -> 1.273     |
+| 1.0 | a^2 -> 4.500  | a^4 -> 5.625     | a^8 -> 5.977     | a^16 -> 6.000     |
+
+** Results discussion / interpretations
++ These results provide a mathematical demonstration of what Mark Carney, former Governor of the Bank of England, famously termed the "Tragedy of the Horizon".
++ Because the model applies a harsh, market-style discount rate (|gamma = 0.5|), it assigns the next generation only half the moral and economic weight of the current one. (Rational if for example 2% inflation over 25 years is combined.)
++ You can see the effects of this discounting unfold in the "Safe" path (the flat values for |pGU| between 0.5 and 0.8): as the time horizon expands to 16 steps, the expected value converges towards |0.5|.
++ Transitioning to a sustainable future is a (small) net positive for society, but the upfront cost (|-2.0|) heavily drags down the lifetime value when future green rewards (|+2.5|) are discounted so aggressively.
+
++ Even though the safe transition is mathematically profitable, the backward induction algorithm still acts with ruthless myopia.
++ Look at the |pGU = 0.9| row: as the horizon stretches to 16 steps, the algorithm still chooses to gamble with climate catastrophe because the expected value of risk (|~ 1.27|) is higher than the guaranteed |0.5| of transitioning.
++ The devastating |-10.0| penalty of climate collapse is discounted into irrelevance because it happens in the future, while the slightly higher |+3.0| profits of Business-As-Usual are collected today.
++ This encapsulates the defining debate between climate economists like William Nordhaus and Nicholas Stern: if we use standard financial discount rates for intergenerational policy, formal optimization models will conclude that it is "rational" to roll the dice on planetary collapse, even when affordable sustainable alternatives exist.
+
++ This aligns well with Robert Pindyck's critique of standard Integrated Assessment Models (IAMs).
+  + Pindyck argues that using conventional cost-benefit analysis and standard discount rates is fundamentally flawed for climate economics because it ignores "fat tails" (low-probability, infinite-cost catastrophic events).
+  + According to Pindyck, climate policy should not be modeled as a marginal investment to be discounted, but rather as an /insurance premium/ paid today to entirely avoid the absorbing state of irreversible ruin (|B|).
+  + Our model mathematically proves his point: standard discounting will simply refuse to pay the premium.
+
++ Classical slogan (John Holdren / UN Foundation): "avoid the unmanageable, manage the unavoidable"
+
+** More details:
+Below are outputs from running
+#+BEGIN_SRC shell
+agda --compile GenDilemma.agda
+./GenDilemma
+#+END_SRC
+#+BEGIN_SRC text
+--- Running Generational Dilemma for n = 2 steps ---
+  pGU = 0.500 => EV: -0.750, Policy: bb
+  pGU = 0.600 => EV: -0.750, Policy: bb
+  pGU = 0.700 => EV: -0.750, Policy: ba
+  pGU = 0.800 => EV: -0.440, Policy: aa
+  pGU = 0.900 => EV: 1.965, Policy: aa
+  pGU = 1.000 => EV: 4.500, Policy: aa
+
+--- Running Generational Dilemma for n = 4 steps ---
+  pGU = 0.500 => EV: 0.188, Policy: bbbb
+  pGU = 0.600 => EV: 0.188, Policy: bbbb
+  pGU = 0.700 => EV: 0.188, Policy: bbba
+  pGU = 0.800 => EV: 0.188, Policy: bbaa
+  pGU = 0.900 => EV: 1.650, Policy: aaaa
+  pGU = 1.000 => EV: 5.625, Policy: aaaa
+
+--- Running Generational Dilemma for n = 8 steps ---
+  pGU = 0.500 => EV: 0.480, Policy: bbbbbbbb
+  pGU = 0.600 => EV: 0.480, Policy: bbbbbbbb
+  pGU = 0.700 => EV: 0.480, Policy: bbbbbbba
+  pGU = 0.800 => EV: 0.480, Policy: bbbbbbaa
+  pGU = 0.900 => EV: 1.315, Policy: aaaaaaaa
+  pGU = 1.000 => EV: 5.977, Policy: aaaaaaaa
+
+--- Running Generational Dilemma for n = 16 steps ---
+  pGU = 0.500 => EV: 0.500, Policy: bbbbbbbbbbbbbbbb
+  pGU = 0.600 => EV: 0.500, Policy: bbbbbbbbbbbbbbbb
+  pGU = 0.700 => EV: 0.500, Policy: bbbbbbbbbbbbbbba
+  pGU = 0.800 => EV: 0.500, Policy: bbbbbbbbbbbbbbaa
+  pGU = 0.900 => EV: 1.273, Policy: aaaaaaaaaaaaaaaa
+  pGU = 1.000 => EV: 6.000, Policy: aaaaaaaaaaaaaaaa
+
+Done.
+#+END_SRC
+* TODO Exercise for 2026-05-25:
++ implement the SDP/MatterMost theory/library
+  + (Perhaps first in another language, for better understanding)
++ and specialise it to two cases: Generational Dilemma + the Waterfall example
+  + in enough detail to enable "numerical experiments" (running the code with different parameters)
++ Write ~2 pages about your results and what you have learnt (in relation to the [[file:../README.org::*Learning outcomes][FPClimate learning outcomes]]).
