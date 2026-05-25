@@ -1,0 +1,362 @@
+* 2026 FP Climate, DICE lectures
+
+** Causal chains of climate change (CC) damages
+*** Production  -> GHG emis. -> rad. forcing -> global warming -> *damage*
+*** Consumption -> GHG emis. -> rad. forcing -> global warming -> *damage*
+*** ?
+
+** Adaptation and Mitigation
+*** Refer to measures (actions, decisions, regulations, etc.) to reduce CC *damages*
+**** Examples of *Mitigation* measures
+***** Reduce GHG emissions of production
+***** Reduce GHG emissions of consumption
+***** Remove GHG from the atmosphere
+***** Temporarily cool down the atmosphere (Solar Radiation Management (SRM), etc.)
+**** Examples of *Adaptation* measures
+***** Modify crops
+***** Build dykes 
+***** Make cities more resilient to heat waves, water shortages, etc.
+
+
+*** Implementing measures to reduce damages
+**** Specifying a damage *goal* is not enough
+**** Many socio-economomic path can achieve (miss) a given goal
+**** One needs to put preferences on socio-economomic paths
+**** These lead to optimal balances between mitigation and adaptation (MOO!)
+
+*** Integrated Assessment Models (IAM): basic ideas
+**** Integrate (macro) economy + ... + climate models
+**** Are not meant to be used for predictions (forecasts)
+**** Typically contain at least
+***** A simplified model of how the global economy evolves in time with
+****** A growth function
+******* Models how the global economy grows (labor, capital, etc.)
+****** A damage function 
+******* Models the economic costs of CC
+******* Temp [e.g. ℃] -> Money [e.g. US$]
+****** A mitigation/adaptation function
+******* Models the economic costs of mitigation/adaptation to CC
+****** An GHG emission function
+******* Models the GHG emissions of production, consumption, etc.
+******* Prod. rate [e.g. US$/year] -> GHG emis. rate [e.g. CO₂Tons/year]
+***** A simplified model of how the climate evolves in time with
+****** A global temperature model
+******* Models how the global temperature evolves in time
+******** Depends on *climate sensitivity* assumptions
+****** A model of how the mass of CO₂ (GHG) in the atmosphere (ocean, etc.) evolves in time
+**** In practice, an IAM consists of a set of
+***** Constant parameters
+****** Example: depreciation rate for capital
+***** Time-dependent parameters
+****** Example: natural CO₂ emissions 
+***** State variables
+****** Example: capital, mass of CO₂ in the atmosphere
+***** Difference equations (for the state variables)
+****** Example: rate of change of mass of CO₂ in the atmosphere
+***** State equations
+****** Example: economic costs of CC
+
+
+*** IAM: main criticisms
+**** Rely on questionable, ad-hoc assumptions ([[file:~/share/articles/data/Robert S. Pindyck. The Use and Misuse of Models for Climate Policy.pdf][Pindyck2015]])
+**** The coupling between climate and economy is not well understood
+**** Economic modelling itself is debatable
+**** Do not contain models of money, finance and banking systems
+**** Narrow range of outcomes/risks (deterministic modelling)
+
+*** IAM: alternatives
+**** Ask experts to estimate, for example the Social Cost of Carbon (SCC)
+***** Climate scientists and economists tend to deliver different estimates
+***** How to put them together?
+
+
+* 2023-09-21 -> 2023-10-16
+** DICE (Dynamic Integrated Climate-Economy model), see [[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+*** Basic ideas
+**** The model describes the evolution of
+***** a global capital
+****** K μ s x₀  : Time -> Capital
+***** the total mass of CO₂ in the atmosphere
+****** M μ s x₀  : Time -> Mass
+***** the total mass of CO₂ in the shallow ocean
+****** X₁ μ s x₀ : Time -> Mass
+***** the total mass of CO₂ in the deep ocean
+****** X₂ μ s x₀ : Time -> Mass
+***** the increase of global temperature of the atmosphere from 1900
+****** H μ s x₀  : Time -> Temperature
+***** the increase of global temperature of the deep ocean from 1900
+****** Z μ s x₀  : Time -> Temperature
+**** under a
+***** mitigation "policy"
+****** μ : Time -> MitigationRate, μ t < 1.2
+**** a
+***** saving "policy"
+****** s : Time -> SavingRate
+**** and an
+***** initial condition
+****** x₀ : X where
+******* X = Capital × ... × Temperature
+**** through 6
+***** [[Difference equations][difference equations]]
+**** in a discrete
+***** [[Time setting][time setting]]
+**** under a number of
+***** [[Modelling assumptions][modelling assumptions]]
+**** and "exogenous" model
+***** [[Constant parameters][constant]] and [[Time-dependent parameters][time-dependent]]
+**** parameters
+*** Time setting
+**** The idea is that the state of the Climate-Economy system
+***** (K μ s x₀, ..., Z μ s x₀) ~ x μ s x₀ : Time -> X
+**** evolves over a finite number
+***** n : ℕ, n > 0
+**** of time steps 
+***** Time = {0,1,...,n}
+**** corresponding to intervals of 5 years and starting from the year 1900
+***** time : Time -> Year
+***** time k = 2015 + k * 5
+**** The interpretations for μ t, s t and x₀ are
+***** μ t - mitigation rate (abatement fraction) over [time t, time (t + 1)]
+***** s t - saving rate over [time t, time (t + 1)]
+***** x₀  - initialcondition at time (time 0)
+**** The interpretations for x μ s x₀ t are
+***** K μ s x₀ t  is the global capital at time (time t)
+****** K μ s x₀ t  : Capital, measured in WTF?
+***** M μ s x₀ t  is the total mass of CO₂ in the atmosphere at time (time t)
+****** M μ s x₀ t  : Mass, measured in Gt
+***** X₁ μ s x₀ t is the total mass of CO₂ in the shallow ocean at time (time t)
+****** X₁ μ s x₀ t : Mass, measured in Gt
+***** X₂ μ s x₀ t - total mass of CO₂ in the deep ocean at time (time t)
+****** X₂ μ s x₀ t : Mass, measured in Gt
+***** H μ s x₀ t  - increase of global temperature of the atmosphere from 1900 at time (time t)
+****** H μ s x₀ t  : Temperature, measured in ℃
+***** Z μ s x₀ t  - increase of global temperature of the deep ocean from 1900 at time (time t)
+****** Z μ s x₀ t  : Temperature, measured in ℃
+
+*** Applications
+**** Policy simulation
+***** Given
+****** a number of time steps
+******* n : ℕ, n > 0
+****** mitigation and saving policies
+******* μ : Time -> MitigationRate
+******* s : Time -> SavingRate
+****** an initial state of the Climate-Economy system
+******* x₀ : X
+***** Compute
+****** the evolution Climate-Economy system
+******* x μ s x₀
+****** and the related
+******* production (GDP) 
+******* investments
+******* consumption
+******* total CO₂ emissions
+******* utility of consumption
+******* welfare
+****** over each time interval, see [[Modelling assumptions][modelling assumptions]].
+**** Optimal policy computation
+***** Given
+****** a number of time steps
+******* n : ℕ, n > 0
+****** an initial state of the Climate-Economy system
+******* x₀ : X
+****** an objective (value, welfare) function 
+******* w : (Time -> MitigationRate) -> (Time -> SavingRate) -> X -> ℝ
+***** Compute
+****** optimal mitigation and saving policies
+******* μ : Time -> MitigationRate
+******* s : Time -> SavingRate
+****** that is such that  
+******* w μ' s' x₀ ≤ w μ s x₀,
+******* t < 30 => 0 ≤ μ t ≤ 1   (no negative emissions)
+******* t ≥ 30 => 0 ≤ μ t ≤ 1.2 (negative emissions possible) 
+****** ∀ μ' : Time -> MitigationRate, s' : Time -> SavingRate such that
+******* t < 30 => 0 ≤ μ' t ≤ 1
+******* t ≥ 30 => 0 ≤ μ' t ≤ 1.2
+***** Remarks
+****** w μ s x₀ is the total discounted welfare, see [[Modelling assumptions][Modelling assumptions]]
+****** w μ s x₀ = sum [(W μ s x₀ t) / (1 + ρ)ᵗ | t <- [1..n]] where
+******* ρ (discount rate, see [[Constant parameters][Constant parameters]])
+
+*** Modelling assumptions
+**** Production (GDP)
+***** Non-controversial ([[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+***** Production increases with technological efficiency
+***** Production increases with capital
+***** Production increases with labour
+***** Definition (Cobb-Douglas production function)
+****** production : TechEff -> Capital -> Labor -> Production
+****** production A K L = A * K^γ * L^(1 - γ) where
+******* γ (elasticity of capital, see [[Constant parameters][Constant parameters]])
+***** The production over [time k, time (k + 1)] is
+****** Y μ s x₀ t = production Aₜ Kₜ Lₜ where
+******* Aₜ = A t (technological efficiency, see [[Time-dependent parameters][Time-dependent parameters]])
+******* Kₜ = K μ s x₀ t (capital, see [[Difference equations][Difference equations]])
+******* Lₜ = L t (labor, see [[Time-dependent parameters][Time-dependent parameters]])
+**** Production available for investment or consumption
+***** Production available increases with production
+***** Production available decreases with abatements (emissions reduction)
+***** Production available decreases with (climate change) damages
+***** The production available over [time k, time (k + 1)] is
+****** Y' μ s x₀ t = (1 - ψₜ * μₜᶿ - ξ * Hₜ²) * Yₜ where
+******* ψₜ = ψ t (WTF?, see [[Time-dependent parameters][Time-dependent parameters]])
+******* μₜ = μ t (mitigation policy)
+******* θ  (WTF? 1 < θ) 
+******* ξ  (WTF?)
+******* Hₜ = H μ s x₀ t (global temperature increase, see [[Difference equations][Difference equations]])
+******* Yₜ = Y μ s x₀ t (production, see [[Modelling assumptions][Modelling assumptions]])
+**** Investments
+***** The investments over [time k, time (k + 1)] are 
+****** I μ s x₀ t = (s t) * (Y' μ s x₀ t)
+**** Consumption
+***** The total consumption over [time k, time (k + 1)] is
+****** C μ s x₀ t = (1 - s t) * (Y' μ s x₀ t)
+**** Utility of per capita consumption
+***** The utility of per capita consumption is
+****** U : PerCapitaConsumption -> Utility
+****** U x = (x^(1 - α) - 1) / (1 - α) where
+******* α is the elasticity of capital, see [[Constant parameters][Constant parameters]]
+**** Welfare
+***** The welfare is the product of the labor times the utility of per capita consumption
+***** The welfare over [time k, time (k + 1)] is
+****** W μ s x₀ t = Lₜ * U (Cₜ / Lₜ) where
+******* Lₜ = L t (labor, see [[Time-dependent parameters][Time-dependent parameters]])
+******* Cₜ = C μ s x₀ t (consumption, see [[Modelling assumptions][Modelling assumptions]])
+**** CO₂ emissions
+***** Non-controversial ([[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+***** CO₂ emissions are the sum of non-industrial and industrial emissions
+****** Non-industrial emissions are exogenous, see [[Time-dependent parameters][Time-dependent parameters]]
+****** Industrial emissions are proportional to production
+***** Definition
+****** emissions : Production -> ℝ -> MitigationRate -> Emission -> Emission
+****** emissions Y σ μ E⁰ = σ * (1 - μ) * Y + E⁰ where
+***** The CO₂ emissions over [time k, time (k + 1)] are
+****** E μ s x₀ t = emissions Yₜ σₜ μₜ E⁰ₜ where
+******* Yₜ = Y Aₜ Kₜ Lₜ where
+******** Aₜ = A t (technological efficiency, see [[Time-dependent parameters][Time-dependent parameters]])
+******** Kₜ = K μ s x₀ t (capital, see [[Difference equations][Difference equations]])
+******** Lₜ = L t (labor, see [[Time-dependent parameters][Time-dependent parameters]])
+******* σₜ  = σ t (emissions-production ratio, see [[Time-dependent parameters][Time-dependent parameters]])
+******* μₜ  = μ t (mitigation policy)
+******* E⁰ₜ = E⁰ t (non-industial total CO₂ emissions, see [[Time-dependent parameters][Time-dependent parameters]])
+
+*** Difference equations
+**** Capital evolution equation
+***** non-controversial ([[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+***** K μ s x₀ (t + 1) = (1 - δ) * K μ s x₀ t + I μ s x₀ t where
+****** δ (capital depreciation rate, see [[Constant parameters][Constant parameters]])
+****** I μ s x₀ t (investments over [time k, time (k + 1)], see [[Modelling assumptions][Modelling assumptions]])
+**** CO₂ mass evolution equations
+***** Controversial ([[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+***** M μ s x₀ (t + 1) = (1 - b₀) * M μ s x₀ t + b₁ * X₁ μ s x₀ t + E μ s x₀ t where
+****** b₀ (WTF?, see [[Constant parameters][Constant parameters]])
+****** b₁ (WTF?, see [[Constant parameters][Constant parameters]])
+****** E μ s x₀ t (emissions over [time k, time (k + 1)], see [[Modelling assumptions][Modelling assumptions]])
+***** X₁ μ s x₀ (t + 1) = b₀ * M μ s x₀ t             +
+*****                     (1 - b₁ - b₃) * X₁ μ s x₀ t +
+*****                     b₂ * X₂ μ s x₀ t where
+****** b₂ (WTF?, see [[Constant parameters][Constant parameters]])
+****** b₃ (WTF?, see [[Constant parameters][Constant parameters]])
+***** X₂ μ s x₀ (t + 1) = b₃ * X₁ μ s x₀ t + (1 - b₂) * X₂ μ s x₀ t
+***** CO₂ mass evolution equations simplified (SICE, see [[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+****** M μ s x₀ (t + 1) = 0.9942 * M μ s x₀ t + E μ s x₀ t
+**** Global temperature increase equations
+***** Controversial ([[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]])
+***** H μ s x₀ (t + 1) = (1 - a₀) * H μ s x₀ t       +
+*****                    a₁ * log (M μ s x₀ (t + 1)) +
+*****                    a₂ * Z μ s x₀ t             +
+*****                    F (t + 1) where
+****** a₀ (WTF?, see [[Constant parameters][Constant parameters]])
+****** a₁ (WTF?, see [[Constant parameters][Constant parameters]])
+****** a₂ (WTF?, see [[Constant parameters][Constant parameters]])
+****** F is the exogenous radiative forcing, see [[Time-dependent parameters][Time-dependent parameters]]
+***** Z μ s x₀ (t + 1) = (1 - a₃) * Z μ s x₀ t + a₃ * H μ s x₀ t where
+****** a₃ (WTF?, see [[Constant parameters][Constant parameters]])
+
+*** Constant parameters
+**** Elasticity of capital
+***** A measure of ..., see [[Modelling assumptions][Modelling assumptions]]
+***** γ : ℝ, 0 < γ < 1
+**** Elasticity of marginal utility of consumption
+***** A measure of ..., see
+***** α : ℝ
+***** α = 1.45 (see eq. 11 of [[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]]) 
+**** Capital depreciation rate
+***** A measure of ..., see [[Modelling assumptions][Modelling assumptions]]
+***** δ : ℝ
+**** Discount rate
+***** A measure of ..., see [[Modelling assumptions][Modelling assumptions]]
+***** ρ : ℝ, 0 < ρ < 1 
+**** a₀ see [[Global temperature increase equations][Global temperature increase equations]]
+***** a₀ : ℝ, a₀ = 1 - 0.8468 - a₃ = 0.1283
+**** a₁ see [[Global temperature increase equations][Global temperature increase equations]]
+***** a₁ : ℝ, a₁ = 0.5338
+**** a₂ see [[Global temperature increase equations][Global temperature increase equations]]
+***** a₂ : ℝ, a₂ = a₀ - 0.03 / a₃ = -1.0765
+**** a₃ see [[Global temperature increase equations][Global temperature increase equations]]
+***** a₃ : ℝ, a₃ = 0.0133 / a₁ = 0.0249
+**** b₀ see [[CO₂ mass evolution equations][CO₂ mass evolution equations]]
+***** b₀ : ℝ, b₀ = 
+**** b₁ see [[CO₂ mass evolution equations][CO₂ mass evolution equations]]
+***** b₁ : ℝ, b₁ = 0.5338
+**** b₂ see [[CO₂ mass evolution equations][CO₂ mass evolution equations]]
+***** b₂ : ℝ, b₂ = 
+**** b₃ see [[CO₂ mass evolution equations][CO₂ mass evolution equations]]
+***** b₃ : ℝ, b₃ = 
+
+*** Time-dependent parameters
+**** Labor
+***** A measure of ..., see [[Production (GDP)][Modelling Assumptions > Production]]
+***** L : T -> ℝ, ∀ t : Time. L t > 0
+**** Technological efficiency
+***** A measure of ..., see [[Production (GDP)][Modelling Assumptions > Production]]
+***** A : T -> ℝ, ∀ t : Time. A t > 0
+**** Non-industial total CO₂ emissions
+***** A measure of ..., see
+***** E⁰ : T -> ℝ, ∀ t : Time. E⁰ t > 0
+***** Interpretation: 
+**** Emissions-production ratio
+***** A measure of ..., see
+***** σ : T -> ℝ, ∀ t : Time. σ t > 0
+**** WTF?
+***** A measure of ..., see
+***** ψ : T -> ℝ, ∀ t : Time. 0 < ψ t < 1
+**** Radiative forcing
+***** A measure of ..., see [[Global temperature increase equations][Global temperature increase equations]]
+***** F : T -> ℝ
+
+*** Model-related notions relevant for climate policy
+**** Social cost of carbon (SCC)
+**** Optimal price of carbon
+
+*** Critique
+**** IAMs should be simpler and more transparent
+***** [[https://www.nber.org/system/files/working_papers/w19244/w19244.pdf][Pindyck2013]], [[https://www.nber.org/system/files/working_papers/w21097/w21097.pdf][Pindyck2017]]
+***** [[https://acris.aalto.fi/ws/portalfiles/portal/10471962/GL.pdf][Gerlagh+Liski2018]], [[https://ethz.ch/content/dam/ethz/special-interest/mtec/cer-eth/resource-econ-dam/documents/research/sured/sured-2014/SURED_14_086_Gerlagh_Liski.pdf][Gerlagh+Liski2014]], [[https://www.researchgate.net/publication/309382429_Carbon_Prices_for_The_Next_Hundred_Years][Gerlagh+Liski2016]]
+***** [[https://www.nature.com/articles/nclimate2526][Editorial2015]]
+**** Some [[Time-dependent parameters][time-dependent parameters]] are highly uncertain
+***** [[https://www3.nd.edu/~nmark/Climate/DICE-simplified_2019.pdf][DICE simplified 2019]]
+
+
+
+
+*** Optimal planning: basic ideas
+**** Mitigation costs decrease with global warming (seems weird!)
+**** Mitigation benefits (avoided damages) increase with global warming
+**** Intertemporal optimization: value function
+***** Expected discounted returns (social welfare function)
+****** Returns (utility) increases with consumption
+****** Utility increase less with increasing consumption
+****** Earlier consumption gives more utility than later consumption
+****** Total utility is the sum of the individual utilities
+***** Avoid global warming above fix threshold
+****** Discontinuous value function?
+**** Intertemporal optimization: controls, policies
+***** Which controls are available
+****** Taxes, subsidies, etc.
+**** Intertemporal optimization: uncertainty
+***** The effect of emissions, decisions, etc. is uncertain
+****** How shall uncertainties be measured?
+
+
+
