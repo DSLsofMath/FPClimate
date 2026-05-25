@@ -32,6 +32,17 @@ This is a course aimed at PhD students or MSc students interested in the applica
     + and specialise it to two cases: Generational Dilemma + the Waterfall example
       + in enough detail to enable "numerical experiments" (running the code with different parameters)
     + Write ~2 pages about your results and what you have learnt (in relation to the [[file:README.org:*Learning outcomes][FPClimate learning outcomes]]).
+
++ Lecture 9 notes: see files in [[file:~/github/patrikja/FPClimate/lectures/iam-dice][iam-dice]]
+  + TODO: Exercises for 2026-06-01:
+    + estimate the run-time complexity of your implementation of the
+      Generational Dilemma: how does the time needed to compute an
+      optimal policy sequence depend on the number of decision steps?
+    + read sections 1 and 2 of [[lectures/iam-dice/Ikefuji et al. DICE simplified (2019).pdf][Ikefuji et al. DICE simplified (2019).pdf]]
+    + read section "II. Background on Integrated Assessment Models" of [[lectures/iam-dice/DICE 2023: Introduction and User's Manual (May 2024).pdf][DICE 2023: Introduction and User's Manual (May 2024).pdf]]
+    + move towards a typed implementation (in Agda or Python) of the Ikefuji et
+      al. description of DICE-2016 as a finite horizon SDP.
+
 *** Background
 The course is based on material from the following research papers:
 
