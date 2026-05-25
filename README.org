@@ -33,7 +33,7 @@ This is a course aimed at PhD students or MSc students interested in the applica
       + in enough detail to enable "numerical experiments" (running the code with different parameters)
     + Write ~2 pages about your results and what you have learnt (in relation to the [[file:README.org:*Learning outcomes][FPClimate learning outcomes]]).
 
-+ Lecture 9 notes: see files in [[file:~/github/patrikja/FPClimate/lectures/iam-dice][iam-dice]]
++ Lecture 9 notes: see files in lectures/iam-dice/
   + TODO: Exercises for 2026-06-01:
     + estimate the run-time complexity of your implementation of the
       Generational Dilemma: how does the time needed to compute an
